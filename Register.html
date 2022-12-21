@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign-up</title>
+  <style>
+    #sign-up-form {
+      width: 550px;
+      height: 400px;
+      background-color: white;
+      border: 1px solid gray;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.5s ease;
+
+    }
+
+    #sign-up-form.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #sign-up-form h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    #sign-up-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #sign-up-form label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    #sign-up-form input {
+      width: 100%;
+      height: 40px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: 0 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    #sign-up-form button {
+      width: 100%;
+      height: 50px;
+      background-color: dodgerblue;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    #sign-up-form p {
+      font-size: 16px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #sign-up-form a {
+      color: dodgerblue;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    #login-form {
+      width: 400px;
+      height: 500px;
+      background-color: white;
+      border: 1px solid gray;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 30px;
+    }
+
+    #login-form h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    #login-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #login-form label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    #login-form input {
+      width: 100%;
+      height: 40px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: 0 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    #login-form button {
+      width: 100%;
+      height: 50px;
+      background-color: dodgerblue;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    #login-form p {
+      font-size: 16px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #login-form a {
+      color: dodgerblue;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div id="sign-up-form">
+    <h1>Sign Up</h1>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br>
+      <label for="phone">Phone (optional):</label><br>
+      <input type="text" id="phone" name="phone"><br><br>
+      <button type="submit">Sign up</button>
+    </form>
+    <p>Already have an account? <a href="#" id="login">Log in</a></p>
+  </div>
+  <div id="login-form">
+    <h1>Login</h1>
+    <form>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="submit">Submit</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="sign-up">Sign up</a></p>
+  </div>
+
+  <script>
+    document.getElementById("sign-up").addEventListener("click", function () {
+      document.getElementById("sign-up-form").style.display = "block";
+      document.getElementById("login-form").style.display = "none";
+    });
+
+    document.getElementById("login").addEventListener("click", function () {
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("sign-up-form").style.display = "none";
+    });
+
+  </script>
+</body>
+
+</html>
